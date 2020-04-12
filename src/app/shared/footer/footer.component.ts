@@ -10,7 +10,7 @@ export class FooterComponent implements OnInit {
 
   fecha: Date = new Date();
 
-  constructor(private infoPaginaService: InfoPaginaService) { }
+  constructor(public infoPaginaService: InfoPaginaService) { }
 
   ngOnInit() {
   }
