@@ -1,0 +1,59 @@
+<footer>
+  <div class="container-footer-all">
+       <div class="container-body">
+           <div class="colum1">
+               <h1>Mas informacion</h1>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor dolore voluptas libero! Voluptatum, assumenda autem! Quam, doloribus impedit. Tempora, consequatur. Debitis amet quae blanditiis autem dolorem alias tenetur excepturi dignissimos.</p>
+
+           </div>
+           <div class="colum2">
+               <h1>Redes Sociales</h1>
+               <div class="row">
+                   <img src="../../../assets/images/linkedin.png">
+                   <a target="_blank" [href]="infoPaginaService.info.linkedin">Sigueme en Linkedin</a>
+               </div>
+               <div class="row">
+                   <img src="../../../assets/images/twitter.png">
+                   <a target="_blank" [href]="infoPaginaService.info.twitter">Sigueme en Twitter</a>
+               </div>
+               <div class="row">
+                   <img src="../../../assets/images/instagram.png">
+                   <a target="_blank" [href]="infoPaginaService.info.instagram">Sigueme en Instagram</a>
+               </div>
+           </div>
+
+           <div class="colum3">
+               <h1>Informacion Contactos</h1>
+               <div class="row2">
+                   <img src="../../../assets/images/house.png">
+                   <p>España,
+                   Comunidad de Madrid,
+                   Madrid
+                   </p>
+               </div>
+
+               <div class="row2">
+                   <img src="../../../assets/images/smartphone.png">
+                   <p>+34-689-251-***</p>
+               </div>
+
+               <div class="row2">
+                  <img src="../../../assets/images/contact.png">
+                  <p><a href="mailto:{{ infoPaginaService.info.email }}">{{ infoPaginaService.info.email }}</a></p>
+               </div>
+           </div>
+       </div>
+
+   </div>
+
+   <div class="container-footer">
+          <div class="footer">
+               <div class="copyright">
+                   {{fecha.getFullYear()}} | <a href="">{{ infoPaginaService.info.autor }}</a>
+               </div>
+               <div class="information">
+                   <a href="">Informacion</a> | <a href="">Privacion y Politica</a> | <a href="">Terminos y Condiciones</a>
+               </div>
+           </div>
+       </div>
+</footer>

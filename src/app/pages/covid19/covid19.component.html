@@ -1,0 +1,120 @@
+<!-- Añadir o Quitar -->
+<div class="bodyCOVID19">
+  <div class="estadisticasGlobales">
+    <div class="dato dato1">
+      <p>Infectados</p>
+      <p>{{totalInfectados | number}}</p>
+    </div>
+    <div class="dato dato2">
+      <p>Muertos</p>
+      <p>{{totalMuertos | number}}</p>
+    </div>
+    <div class="dato dato3">
+      <p>Recuperados</p>
+      <p>{{totalRecuperados | number}}</p>
+    </div>
+  </div>
+  <div class="covid19">
+    <div class="seleccionar">
+      <div class="seleccion">
+          <mat-form-field class="seleccionForm">
+            <mat-label>Seleccione un Pais</mat-label>
+            <mat-select [formControl]="formSeleccionar" multiple>
+              <mat-option *ngFor="let pais of listaPaisesSeleccionar" [value]="pais">{{pais}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <button type="button" (click)="anadirPaises()" class=" seleccionBtn btn btn-secondary ml-3">Añadir Paises</button>
+      </div>
+      <div class="seleccion">
+        <mat-form-field class="seleccionForm">
+          <mat-label>Seleccione un Pais</mat-label>
+          <mat-select [formControl]="formQuitar" multiple>
+            <mat-option *ngFor="let pais of listaPaisesQuitar" [value]="pais">{{pais}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button type="button" (click)="quitarPaises()" class="seleccionBtn btn btn-secondary ml-3">Quitar Paises</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Graficas -->
+  <div *ngIf="listaPaisesQuitar.length > 0" class="graficas">
+    <div class="tabla">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><img class="icono" src="../../../assets/images/pais.png" title="Paises"></th>
+            <th><img class="icono" src="../../../assets/images/contagio.png" title="Contagiados"></th>
+            <th><img class="icono" src="../../../assets/images/muerto.jpg" title="Muertos"></th>
+            <th><img class="icono" src="../../../assets/images/recuperado.png" title="Recuperados"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pais of listaPaisesQuitar">
+            <td>{{pais}}</td>
+            <td>{{infoPaises[pais][this.infoPaises['Spain'].length -1].confirmed}}</td>
+            <td>{{infoPaises[pais][this.infoPaises['Spain'].length -1].deaths}}</td>
+            <td>{{infoPaises[pais][this.infoPaises['Spain'].length -1].recovered}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flex contagiados">
+      <p class="tituGrafi">Contagiados</p>
+      <div class="flex-item">
+        <div style="display: block;">
+        <canvas baseChart width="400" height="200"
+                    [datasets]="lineChartContagiados"
+                    [labels]="lineChartLabels"
+                    [options]="lineChartOptions"
+                    [colors]=""
+                    [legend]="lineChartLegend"
+                    [chartType]="lineChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="flex muertos">
+      <p class="tituGrafi">Muertos</p>
+      <div class="flex-item">
+        <div style="display: block;">
+        <canvas baseChart width="400" height="200"
+                    [datasets]="lineChartMuertos"
+                    [labels]="lineChartLabels"
+                    [options]="lineChartOptions"
+                    [colors]=""
+                    [legend]="lineChartLegend"
+                    [chartType]="lineChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="flex recuperados">
+      <p class="tituGrafi">Recuperados</p>
+      <div class="flex-item">
+        <div style="display: block;">
+        <canvas baseChart width="400" height="200"
+                    [datasets]="lineChartRecuperados"
+                    [labels]="lineChartLabels"
+                    [options]="lineChartOptions"
+                    [colors]=""
+                    [legend]="lineChartLegend"
+                    [chartType]="lineChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

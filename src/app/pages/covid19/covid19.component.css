@@ -1,0 +1,123 @@
+.bodyCOVID19 {
+  width: 90%;
+  min-height: calc(100vh - 400px);
+  margin: 10px 5% 0% 5%;
+}
+
+.estadisticasGlobales{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: no-wrap;
+}
+
+.estadisticasGlobales .dato{
+  width: 100%;
+  background-color: #CCCCCC;
+  border-radius: 5px;
+  padding: 5px;
+  color: #242F40;
+  text-align: center;
+}
+
+.dato1, .dato2 {
+  margin-right: 10px;
+}
+
+.dato p {
+  margin: 0px;
+}
+.dato p:first-child{
+  font-size: 20px;
+}
+.dato p:last-child{
+  font-size: 17px;
+  color: #CF4D6F;
+}
+
+.covid19{
+  margin: 10px 0% 0% 0%;
+  padding: 0px 10px 0px 10px;
+  background-color: #CCCCCC;
+  border-radius: 5px;
+}
+
+.seleccionar{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.graficas {
+  background-color: #CCCCCC;
+  margin: 10px 0% 0% 0%;
+  border-radius: 5px;
+  padding: 10px;
+}
+.tituGrafi{
+  margin: 0;
+  font-size: 22px;
+  color: #242F40;
+}
+
+.icono {
+  width: 25px;
+}
+
+/* TABLA */
+
+table{
+  background-color: #F2F2F2;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td{
+	padding: 10px;
+}
+
+thead{
+	background-color: #EBEBEB;
+	border-bottom: solid 3px #0F362D;
+	color:  #F2F2F2;
+}
+
+tr:nth-child(even){
+	background-color: #ddd;
+}
+
+tr:hover td{
+	background-color: #5E5E5E;
+	color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .bodyCOVID19 {
+    width: auto;
+    margin: 10px 10px 0% 10px;
+  }
+  .dato p:first-child{
+    font-size: 15px;
+  }
+  .dato p:last-child{
+    font-size: 13px;
+    color: #CF4D6F;
+  }
+  .tituGrafi{
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .seleccionar{
+    display: block;
+  }
+
+  .seleccionForm {
+    width: 50%;
+  }
+
+  .seleccionBtn {
+    width: 45%;
+  }
+}
