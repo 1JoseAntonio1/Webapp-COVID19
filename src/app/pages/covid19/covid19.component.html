@@ -37,6 +37,10 @@
     </div>
   </div>
 
+  <div *ngIf="listaPaisesQuitar.length == 0" class="imagenCOVID19">
+    <img src="./../../../assets/images/covid19.png" alt="">
+  </div>
+
   <!-- Graficas -->
   <div *ngIf="listaPaisesQuitar.length > 0" class="graficas">
     <div class="tabla">
@@ -64,7 +68,7 @@
       <p class="tituGrafi">Contagiados</p>
       <div class="flex-item">
         <div style="display: block;">
-        <canvas baseChart width="400" height="200"
+        <canvas baseChart width="400" height="230"
                     [datasets]="lineChartContagiados"
                     [labels]="lineChartLabels"
                     [options]="lineChartOptions"
@@ -81,7 +85,7 @@
       <p class="tituGrafi">Muertos</p>
       <div class="flex-item">
         <div style="display: block;">
-        <canvas baseChart width="400" height="200"
+        <canvas baseChart width="400" height="230"
                     [datasets]="lineChartMuertos"
                     [labels]="lineChartLabels"
                     [options]="lineChartOptions"
@@ -98,7 +102,7 @@
       <p class="tituGrafi">Recuperados</p>
       <div class="flex-item">
         <div style="display: block;">
-        <canvas baseChart width="400" height="200"
+        <canvas baseChart width="400" height="230"
                     [datasets]="lineChartRecuperados"
                     [labels]="lineChartLabels"
                     [options]="lineChartOptions"
