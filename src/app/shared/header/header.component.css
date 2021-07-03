@@ -1,0 +1,10 @@
+nav{
+    padding: 0;
+}
+
+nav > div{
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    padding: .5rem 1rem;
+}

@@ -11,7 +11,7 @@ export class InfoPaginaService {
   cargada = false;
 
   constructor(private http: HttpClient) {
-    console.log('Servicio de infoPagina cargada');
+    //console.log('Servicio de infoPagina cargada');
     //Leer el archivo JSON
     this.http.get('assets/data/data-pagina.json')
         .subscribe( (resp: InfoPagina) => {

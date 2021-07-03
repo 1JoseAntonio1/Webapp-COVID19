@@ -93,7 +93,7 @@ export class Covid19Component implements OnInit {
       }
       this.ordenarListas();
       this.obtenerInfoPaisesSeleccionados();
-      this.alerta('success','','Quitado/s Correctamente','La grafica se a actualizado');
+      this.alerta('success', '', 'Quitado/s Correctamente', 'La grafica se a actualizado');
     } else {
       this.alerta('warning','','Seleccione algun Pais para quitar','');
     }

@@ -18,7 +18,7 @@
     <div class="seleccionar">
       <div class="seleccion">
           <mat-form-field class="seleccionForm">
-            <mat-label>Seleccione un Pais</mat-label>
+            <mat-label>Selecciona Pais/es</mat-label>
             <mat-select [formControl]="formSeleccionar" multiple>
               <mat-option *ngFor="let pais of listaPaisesSeleccionar" [value]="pais">{{pais}}</mat-option>
             </mat-select>
@@ -27,7 +27,7 @@
       </div>
       <div class="seleccion">
         <mat-form-field class="seleccionForm">
-          <mat-label>Seleccione un Pais</mat-label>
+          <mat-label>Selecciona Pais/es</mat-label>
           <mat-select [formControl]="formQuitar" multiple>
             <mat-option *ngFor="let pais of listaPaisesQuitar" [value]="pais">{{pais}}</mat-option>
           </mat-select>

@@ -6,7 +6,6 @@
 }
 footer{
   width: 100%;
-  margin-top: 10px;
   background: #202020;
   color: white;
 }
@@ -21,9 +20,9 @@ p, a {
 
 .container-footer-all{
   width: 100%;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: auto;
-  padding: 40px;
+  padding: 20px 1rem;
 }
 
 .container-body{
@@ -85,7 +84,7 @@ p, a {
 }
 
 .footer{
-  max-width: 1200px;
+  max-width: 1600px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -150,16 +149,5 @@ p, a {
     margin-left: 13px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 

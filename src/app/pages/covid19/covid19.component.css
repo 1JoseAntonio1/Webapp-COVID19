@@ -1,7 +1,8 @@
 .bodyCOVID19 {
-  width: 90%;
-  /* min-height: calc(100vh - 400px); */
-  margin: 10px 5% 0% 5%;
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+  padding: 1rem;
 }
 
 .estadisticasGlobales{
@@ -43,8 +44,7 @@
 
 .seleccionar{
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: space-between;  
 }
 
 .graficas {
@@ -91,15 +91,20 @@ tr:hover td{
 	color: white;
 }
 
+.imagenCOVID19 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .imagenCOVID19 img{
-  margin: 20px 35% 0px 35%;
+  margin: 40px 20px;
   width: 30%;
 }
 
 @media screen and (max-width: 1200px) {
   .bodyCOVID19 {
-    width: auto;
-    margin: 10px 10px 0% 10px;
+
   }
   .dato p:first-child{
     font-size: 15px;
@@ -112,21 +117,61 @@ tr:hover td{
     font-size: 18px;
   }
   .imagenCOVID19 img{
-    margin: 20px 25% 10px 25%;
     width: 50%;
   }
 }
 
 @media screen and (max-width: 750px) {
-  .seleccionar{
-    display: block;
+  .covid19{
+    padding: 0;
+  }
+  
+  .bodyCOVID19 {
+    padding: .5rem .5rem;
+  }  
+
+  .seleccion{
+    display: flex;
+    flex-direction: column;
   }
 
-  .seleccionForm {
+  .seleccionar{
+    padding: 0 10px 10px 10px;
+  }
+
+  .seleccionar > div:first-child{
+    padding-right: 7px;
+  }
+
+  .seleccionar > div:last-child{
+    padding-left: 7px;
+  }
+
+  .seleccion{
     width: 50%;
   }
 
+  mat-form-field{
+    width: 100%;
+  } 
+
   .seleccionBtn {
-    width: 45%;
+   margin: auto !important;
+  }
+
+  div.tabla > table > thead > tr > th{
+    text-align: center;
+  }
+}
+
+@media screen and (min-height: 900px) {
+  .imagenCOVID19 img{
+    margin: 200px 20px;
+  }
+}
+
+@media screen and (min-height: 700px) {
+  .imagenCOVID19 img{
+    margin: 40px 20px;
   }
 }
