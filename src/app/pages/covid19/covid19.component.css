@@ -103,9 +103,6 @@ tr:hover td{
 }
 
 @media screen and (max-width: 1200px) {
-  .bodyCOVID19 {
-
-  }
   .dato p:first-child{
     font-size: 15px;
   }
@@ -115,9 +112,6 @@ tr:hover td{
   }
   .tituGrafi{
     font-size: 18px;
-  }
-  .imagenCOVID19 img{
-    width: 50%;
   }
 }
 
@@ -164,14 +158,36 @@ tr:hover td{
   }
 }
 
-@media screen and (min-height: 900px) {
+.imagenCOVID19 img{
+  margin: 250px 20px !important;
+}
+
+@media (max-height: 1200px) {
   .imagenCOVID19 img{
-    margin: 200px 20px;
+    margin: 200px 20px !important;
   }
 }
 
-@media screen and (min-height: 700px) {
+@media (max-height: 1100px) {
   .imagenCOVID19 img{
-    margin: 40px 20px;
+    margin: 150px 20px !important;
+  }
+}
+
+@media (max-height: 1000px) {
+  .imagenCOVID19 img{
+    margin: 100px 20px !important;
+  }
+}
+
+@media (max-height: 900px) {
+  .imagenCOVID19 img{
+    margin: 50px 20px !important;
+  }
+}
+
+@media (max-height: 800px) {
+  .imagenCOVID19 img{
+    margin: 20px 20px !important;
   }
 }
